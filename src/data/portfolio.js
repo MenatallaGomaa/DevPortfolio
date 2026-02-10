@@ -1,4 +1,4 @@
-// Replace this content with your details from LinkedIn
+// Portfolio data – edit this file to update your site
 
 export const profile = {
   name: 'Menatalla Gomaa',
@@ -20,20 +20,91 @@ export const about = {
 
 export const experience = [
   {
-    role: 'Your Job Title',
-    company: 'Company Name',
-    period: 'Month Year – Present',
-    description: 'Short description of your role and main responsibilities. Copy from LinkedIn and tweak for the portfolio.',
-    tags: ['React', 'TypeScript', 'Example'],
+    role: 'Frontend Engineer',
+    company: 'Mercanis',
+    period: 'Feb 2026 – Present',
+    description: [
+      'Building core product features with SvelteKit, TypeScript, and Tailwind.',
+      'Improving and scaling a modular frontend architecture.',
+      'Collaborating through code reviews, pairing, and technical discussions.',
+      'Driving improvements in performance, accessibility, and developer experience.',
+    ],
+    tags: ['SvelteKit', 'TypeScript', 'Tailwind', 'Jira'],
   },
   {
-    role: 'Previous Role',
-    company: 'Previous Company',
-    period: 'Month Year – Month Year',
-    description: 'What you did and what impact it had. Keep it concise.',
-    tags: ['JavaScript', 'CSS', 'APIs'],
+    role: 'Frontend Developer',
+    company: 'BudnBed',
+    period: 'Nov 2025 – Jan 2026',
+    description: [
+      'Translating the vision of a student-owned economy into clear, intuitive user interfaces.',
+      'Building trust-first UX for student-to-student stays and hangouts.',
+      'Developing and iterating on core product features from early concepts to production.',
+      'Collaborating closely with product and design in a fast-moving startup environment.',
+      'Focusing on usability, performance, and simplicity across the frontend.',
+      'Laying scalable foundations for growth while keeping the product human and accessible.',
+    ],
+    tags: ['Front-End Development', 'APIs', 'UX', 'Startup'],
   },
-  // Add more entries from your LinkedIn experience
+  {
+    role: 'Junior Frontend Developer',
+    company: 'LEAP Digital Marketing GmbH',
+    period: 'Apr 2025 – Nov 2025',
+    description: [
+      'Developed frontend features using JavaScript, HTML, and CSS for large-scale e-commerce websites.',
+      'Built and executed A/B & multivariate tests using the Kameleoon experimentation platform.',
+      'Analyzed test results to identify UX improvements and measurable business impact.',
+      'Implemented tracking & personalization logic, improving user journeys and engagement.',
+      'Collaborated closely with UX designers, analysts, and CRO managers in an agile team.',
+      'Optimized performance and accessibility, ensuring fast and user-friendly experiences.',
+      'Debugged client-side issues and delivered stable, clean and maintainable code.',
+    ],
+    tags: ['JavaScript', 'HTML & CSS', 'A/B Testing', 'Kameleoon', 'Agile'],
+  },
+  {
+    role: 'Full-Stack Development Instructor',
+    company: 'ReDI School of Digital Integration',
+    period: 'Sep 2024 – Dec 2024',
+    description: [
+      'Taught Full-Stack Web Development with a focus on frontend technologies (HTML, CSS, JavaScript, React) to women with forced migration backgrounds.',
+      'Empowered students by fostering technical skills and confidence to help them transition into the tech industry.',
+      'Leveraged my personal journey from Sales to Full-Stack Development to mentor and inspire students navigating their own career changes.',
+      'Collaborated with a diverse community of volunteers to create a supportive and inclusive learning environment.',
+      'Contributed to bridging the digital skills gap and supporting refugee women\'s integration into the tech workforce.',
+    ],
+    tags: ['Teaching', 'React', 'JavaScript', 'Mentoring'],
+  },
+  {
+    role: 'Software Developer',
+    company: 'COLNEO GmbH',
+    period: 'Aug 2024 – Oct 2024',
+    description: [
+      'Translated Figma designs into responsive, pixel-perfect interfaces.',
+      'Integrated REST APIs and ensured stable, efficient data flow.',
+      'Applied modern JavaScript best practices for cleaner, more maintainable code.',
+    ],
+    tags: ['JavaScript', 'Figma', 'REST APIs'],
+  },
+  {
+    role: 'Full Stack Developer',
+    company: 'Freelance',
+    period: 'Jan 2024 – Jul 2024',
+    description: 'Freelance full-stack development projects across the stack.',
+    tags: ['Full-Stack', 'JavaScript', 'React'],
+  },
+  {
+    role: 'Sales Support Associate',
+    company: 'SoftwareOne',
+    period: 'Apr 2023 – Sep 2023',
+    description: 'Sales coordination with the sales team: order processing, quote generation, and documentation management. Used Microsoft Dynamics NAV (ERP) and ServiceNow for workflows and ticket management. Primary point of contact for customer inquiries, data management, and administrative support including calendar management, meeting coordination, and sales reports. Collaborated with marketing and logistics to meet customer needs.',
+    tags: ['Sales Coordination', 'CRM', 'ServiceNow', 'Microsoft Dynamics', 'B2B'],
+  },
+  {
+    role: 'Sales Representative',
+    company: 'Pathus Beteiligungsgesellschaft GmbH',
+    period: 'Aug 2019 – Mar 2023',
+    description: 'Customer engagement, product information, and positive in-store experience. Met and exceeded sales targets through effective sales techniques and upselling. Contributed to visual merchandising, inventory management, and stock checks. Handled customer concerns and collaborated with team and management to achieve store goals.',
+    tags: ['Customer Service', 'Sales', 'Team Collaboration', 'Problem Solving'],
+  },
 ]
 
 export const projects = [
