@@ -1,0 +1,214 @@
+/* Hero */
+.hero {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem var(--space);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1.25rem var(--space);
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.nav a {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.nav a:hover {
+  color: var(--accent);
+}
+
+.hero-inner {
+  margin-top: 2rem;
+}
+
+.hero h1 {
+  margin: 0 0 0.5rem;
+}
+
+.tagline {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  margin: 0 0 0.25rem;
+}
+
+.location {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin: 0 0 1.5rem;
+}
+
+.hero-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.hero-links a {
+  font-weight: 500;
+}
+
+/* About */
+.about-p {
+  margin: 0 0 1rem;
+  color: var(--text);
+}
+
+.about-p:last-child {
+  margin-bottom: 0;
+}
+
+/* Experience */
+.experience-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.experience-item {
+  padding: 1.75rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.experience-item:last-child {
+  border-bottom: none;
+}
+
+.experience-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.experience-header h3 {
+  margin: 0;
+  width: 100%;
+}
+
+.company {
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.period {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.experience-desc {
+  margin: 0 0 0.75rem;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+/* Tags (shared) */
+.tags {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tags li {
+  font-size: 0.8rem;
+  padding: 0.25rem 0.6rem;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 4px;
+}
+
+/* Projects */
+.project-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-card {
+  padding: 1.75rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.project-card:last-child {
+  border-bottom: none;
+}
+
+.project-card h3 {
+  margin: 0 0 0.5rem;
+}
+
+.project-card p {
+  margin: 0 0 0.75rem;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.project-links a {
+  font-weight: 500;
+}
+
+/* Skills */
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skills-list li {
+  padding: 0.4rem 0.85rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+/* Contact */
+.contact p {
+  margin: 0 0 0.5rem;
+}
+
+/* Footer */
+.footer {
+  padding: 2rem var(--space);
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--border);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+  .hero {
+    padding: 2rem 2rem;
+  }
+
+  .nav {
+    padding: 1.25rem 2rem;
+  }
+}

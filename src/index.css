@@ -1,0 +1,69 @@
+:root {
+  --bg: #faf8f5;
+  --bg-elevated: #fff;
+  --text: #1a1a1a;
+  --text-muted: #5c5c5c;
+  --accent: #2d5a4a;
+  --accent-soft: #e8f0ed;
+  --border: #e5e0d8;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-serif: 'Instrument Serif', Georgia, serif;
+  --space: 1.5rem;
+  --max-width: 720px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #1e3d32;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+h1 { font-size: clamp(2.25rem, 5vw, 3.5rem); }
+h2 { font-size: clamp(1.75rem, 3vw, 2.25rem); margin: 0 0 1rem; }
+h3 { font-size: 1.25rem; margin: 0 0 0.5rem; }
+
+section {
+  padding: 4rem var(--space);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+  section {
+    padding: 5rem 2rem;
+  }
+}
