@@ -31,6 +31,12 @@ npm run build
 
 Output is in `dist/`. Deploy that folder to Vercel, Netlify, GitHub Pages, or any static host.
 
+## Git
+
+- **Commits from this folder** use the name **Menatalla Gomaa** and the GitHub noreply email. To use a different email, run:  
+  `git config user.email "your@email.com"` (inside this repo).
+- **If you see thousands of “changes”** in Cursor/VS Code, the app is likely using a parent folder (e.g. your home or Desktop) that has its own `.git`. Open **only** the `DevPortfolio` folder as the workspace (File → Open Folder → choose `DevPortfolio`), so the Source Control view shows only this project.
+
 ## Tech
 
 - React 18
