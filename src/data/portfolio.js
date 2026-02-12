@@ -4,10 +4,11 @@ export const profile = {
   name: 'Menatalla Gomaa',
   tagline: 'Building performant, accessible web experiences.',
   location: 'Germany',
-  email: 'your.email@example.com',
+  email: 'minafathi98@gmail.com',
+  phone: '+49 176 23423163',
   linkedin: 'https://www.linkedin.com/in/menatalla-gomaa-0703mg/',
-  github: 'https://github.com/yourusername',
-  image: null,
+  github: 'https://github.com/MenatallaGomaa',
+  image: '/Linkedin Pic.jpeg',
   cvUrl: null, // optional: add URL to your CV PDF, e.g. '/cv.pdf'
 }
 
@@ -110,28 +111,54 @@ export const experience = [
 
 export const projects = [
   {
-    title: 'Project name',
-    description: 'One or two sentences about what it does and why it’s interesting.',
-    link: 'https://github.com/you/repo',
-    liveUrl: null, // optional: 'https://your-demo.com'
-    tags: ['React', 'Vite', 'CSS'],
+    title: 'Bella Biladi Pizzeria',
+    description: 'Fully responsive website for Bella Biladi Pizzeria with UI/UX from Figma, Node.js/Express backend for reservation inquiries, Google Maps API integration, and mobile optimization.',
+    link: 'https://github.com/MenatallaGomaa',
+    liveUrl: 'https://bellabiladipizzeria.com/',
+    tags: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Express', 'Figma', 'Google Maps API'],
   },
   {
-    title: 'Another project',
-    description: 'Brief description. Focus on the problem and your solution.',
-    link: 'https://github.com/you/other-repo',
-    liveUrl: 'https://demo-link.com',
-    tags: ['Vue', 'Node', 'API'],
+    title: 'DriveEase',
+    description: 'Car rental web application with an intuitive UI and seamless booking experience. Implemented JWT authentication for secure user accounts.',
+    link: 'https://github.com/MenatallaGomaa',
+    liveUrl: 'https://main--driveease.netlify.app/',
+    tags: ['React.js', 'Tailwind CSS', 'JWT'],
   },
-  // Add 2–4 projects from your GitHub or personal work
+  {
+    title: 'Homyz Real Estate',
+    description: 'Real estate site with an intuitive search to filter by location, price, and features. Detailed property listings with comprehensive info and images, increasing user interaction by 30%.',
+    link: 'https://github.com/MenatallaGomaa',
+    liveUrl: 'https://main--homyzrealestatewebsie.netlify.app/',
+    tags: ['React.js', 'JavaScript'],
+  },
+  {
+    title: 'EvoGym',
+    description: 'Fitness web application with a component-based architecture. TypeScript for static typing and reliability, responsive UI with Tailwind CSS, increasing mobile usage by 25%.',
+    link: 'https://github.com/MenatallaGomaa',
+    liveUrl: 'https://evogymproject.netlify.app/',
+    tags: ['TypeScript', 'React.js', 'Tailwind CSS'],
+  },
 ]
 
 export const skills = [
   'JavaScript',
   'TypeScript',
   'React',
-  'HTML & CSS',
+  'SvelteKit',
+  'Vue.js',
+  'HTML5',
+  'CSS3',
+  'Tailwind CSS',
   'Git',
   'REST APIs',
-  // Add or remove based on your LinkedIn skills
+  'Figma',
+  'A/B Testing',
+  'Agile',
+  'Node.js',
+  'Responsive Design',
+  'Accessibility',
+  'Performance',
+  'UX Design',
+  'Code Review',
+  'Jira',
 ]
