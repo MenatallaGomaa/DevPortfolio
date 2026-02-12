@@ -64,7 +64,7 @@ export const experience = [
   {
     role: 'Junior Frontend Developer',
     company: 'LEAP Digital Marketing GmbH',
-    period: 'Apr 2025 – Nov 2025',
+    period: 'Apr 2025 – Jul 2025',
     description: [
       'Developed frontend features using JavaScript, HTML, and CSS for large-scale e-commerce websites.',
       'Built and executed A/B & multivariate tests using the Kameleoon experimentation platform.',
@@ -137,7 +137,7 @@ export const education = [
   },
   {
     institution: 'Susanna-Eger-Schule Leipzig',
-    program: 'Rechnungswesen und Business Management',
+    program: 'Accounting and Business Management',
     period: 'Sep 2019 – Jun 2022',
     description: 'Acquired expertise in strategic management, corporate leadership, and organisational development. Developed skills to manage corporate finances and make informed, data-driven business decisions.',
     tags: ['Microsoft Office', 'Business Management', 'Strategic Management'],
@@ -185,6 +185,19 @@ export const projects = [
     image: '/projects/evogym.png',
     tags: ['TypeScript', 'React.js', 'Tailwind CSS'],
   },
+]
+
+export const certifications = [
+  { title: 'BudnBed Experience Certificate', file: 'budnbed-experience.pdf' },
+  { title: 'ReDI Recommendation Letter', file: 'recommendation-letter.pdf' },
+  { title: 'ReDI Certificate of Volunteer Appreciation', file: 'volunteer-appreciation.pdf' },
+  { title: 'A/B Testing Course and Certification', file: 'ab-testing-certification.pdf' },
+  { title: 'Kameleoon Feature Experimentation Platform Essentials', file: 'kameleoon-feature-experimentation.pdf' },
+  { title: 'Kameleoon Web Experimentation Platform Essentials', file: 'kameleoon-web-experimentation.pdf' },
+  { title: 'COLNEO Employment Reference', file: 'arbeitszeugnis.pdf' },
+  { title: 'LEAP Employment Reference', file: 'leap-arbeitszeugnis.pdf' },
+  { title: 'LEAP Recommendation Letter', file: 'referenzschreiben.pdf' },
+  { title: 'Ironhack Full Stack Web Development', file: 'ironhack-certificate.pdf' },
 ]
 
 export const skills = [

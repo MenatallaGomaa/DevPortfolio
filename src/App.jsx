@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from 'react'
-import { profile, about, education, projects, skills } from './data/portfolio'
+import { profile, about, education, projects, skills, certifications } from './data/portfolio'
 import './App.css'
 
 const experience = [
   { role: 'Frontend Engineer', company: 'Mercanis', period: 'Feb 2026 – Present', description: ['Building core product features with SvelteKit, TypeScript, and Tailwind.', 'Improving and scaling a modular frontend architecture.', 'Collaborating through code reviews, pairing, and technical discussions.', 'Driving improvements in performance, accessibility, and developer experience.'], tags: ['Svelte', 'TypeScript', 'Tailwind CSS', 'Vite', 'Jest', 'Playwright', 'Figma', 'Jira', 'GitLab', 'CI/CD', 'Sprint Planning'] },
   { role: 'Frontend Developer', company: 'BudnBed', period: 'Nov 2025 – Jan 2026', description: ['Translating the vision of a student-owned economy into clear, intuitive user interfaces.', 'Building trust-first UX for student-to-student stays and hangouts.', 'Developing and iterating on core product features from early concepts to production.', 'Collaborating closely with product and design in a fast-moving startup environment.', 'Focusing on usability, performance, and simplicity across the frontend.', 'Laying scalable foundations for growth while keeping the product human and accessible.'], tags: ['React', 'JavaScript', 'APIs', 'UX Design', 'Startup', 'Product Development', 'Design Collaboration', 'Scalable Frontend'] },
-  { role: 'Junior Frontend Developer', company: 'LEAP Digital Marketing GmbH', period: 'Apr 2025 – Nov 2025', description: ['Developed frontend features using JavaScript, HTML, and CSS for large-scale e-commerce websites.', 'Built and executed A/B & multivariate tests using the Kameleoon experimentation platform.', 'Analyzed test results to identify UX improvements and measurable business impact.', 'Implemented tracking & personalization logic, improving user journeys and engagement.', 'Collaborated closely with UX designers, analysts, and CRO managers in an agile team.', 'Optimized performance and accessibility, ensuring fast and user-friendly experiences.', 'Debugged client-side issues and delivered stable, clean and maintainable code.'], tags: ['JavaScript', 'HTML', 'CSS', 'Kameleoon', 'E-Commerce', 'A/B Testing', 'Jira', 'Confluence'] },
+  { role: 'Junior Frontend Developer', company: 'LEAP Digital Marketing GmbH', period: 'Apr 2025 – Jul 2025', description: ['Developed frontend features using JavaScript, HTML, and CSS for large-scale e-commerce websites.', 'Built and executed A/B & multivariate tests using the Kameleoon experimentation platform.', 'Analyzed test results to identify UX improvements and measurable business impact.', 'Implemented tracking & personalization logic, improving user journeys and engagement.', 'Collaborated closely with UX designers, analysts, and CRO managers in an agile team.', 'Optimized performance and accessibility, ensuring fast and user-friendly experiences.', 'Debugged client-side issues and delivered stable, clean and maintainable code.'], tags: ['JavaScript', 'HTML', 'CSS', 'Kameleoon', 'E-Commerce', 'A/B Testing', 'Jira', 'Confluence'] },
   { role: 'Full-Stack Development Instructor', company: 'ReDI School of Digital Integration', period: 'Sep 2024 – Dec 2024', description: ['Taught Full-Stack Web Development (HTML, CSS, JavaScript, React) to women with forced migration backgrounds.', 'Empowered students by fostering technical skills and confidence.', 'Leveraged my journey from Sales to Full-Stack Development to mentor and inspire.', 'Contributed to bridging the digital skills gap and supporting refugee women\'s integration into tech.'], tags: ['Teaching', 'React', 'JavaScript', 'HTML', 'CSS', 'Mentoring', 'Full-Stack', 'Curriculum Design'] },
   { role: 'Software Developer', company: 'COLNEO GmbH', period: 'Aug 2024 – Oct 2024', description: ['Translated Figma designs into responsive, pixel-perfect interfaces.', 'Integrated REST APIs and ensured stable, efficient data flow.', 'Applied modern JavaScript best practices for cleaner, more maintainable code.'], tags: ['JavaScript', 'Figma', 'Vue'] },
   { role: 'Full Stack Developer', company: 'Freelance', period: 'Jan 2024 – Jul 2024', description: 'Freelance full-stack development projects across the stack.', tags: ['Full-Stack', 'JavaScript', 'React', 'Node.js', 'APIs', 'Git', 'Responsive Web'] },
@@ -32,6 +32,7 @@ function App() {
   const [aboutRef, aboutInView] = useInView()
   const [expRef, expInView] = useInView()
   const [educationRef, educationInView] = useInView()
+  const [certificationsRef, certificationsInView] = useInView()
   const [projectsRef, projectsInView] = useInView()
   const [skillsRef, skillsInView] = useInView()
   const [contactRef, contactInView] = useInView()
@@ -57,6 +58,7 @@ function App() {
           <a href="#experience">Experience</a>
           <a href="#education">Education</a>
           <a href="#projects">Projects</a>
+          <a href="#certifications">Certifications</a>
           <a href="#skills">Skills</a>
           <a href="#contact">Contact</a>
         </nav>
@@ -211,6 +213,21 @@ function App() {
                   {entry.tags.map((tag, j) => <span key={j}>{tag}</span>)}
                 </div>
               )}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      {/* Certifications */}
+      <section id="certifications" ref={certificationsRef} className={`section section-reveal ${certificationsInView ? 'in-view' : ''}`}>
+        <h2 className="section-title">Certifications</h2>
+        <ul className="certifications-list">
+          {certifications.map((cert, i) => (
+            <li key={i} className="certification-item">
+              <a href={`/certifications/${cert.file}`} target="_blank" rel="noopener noreferrer" className="certification-link">
+                <span className="certification-title">{cert.title}</span>
+                <span className="certification-download" aria-hidden="true">↗</span>
+              </a>
             </li>
           ))}
         </ul>

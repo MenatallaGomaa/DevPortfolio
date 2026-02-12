@@ -576,6 +576,53 @@
   margin-bottom: 0;
 }
 
+/* ========== Certifications ========== */
+.certifications-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.certification-item {
+  border-bottom: 1px solid var(--border);
+}
+
+.certification-item:last-child {
+  border-bottom: none;
+}
+
+.certification-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.certification-link:hover {
+  color: var(--accent);
+}
+
+.certification-title {
+  font-weight: 500;
+}
+
+.certification-download {
+  flex-shrink: 0;
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.certification-link:hover .certification-download {
+  color: var(--accent);
+}
+
 /* ========== Skills ========== */
 @keyframes skillsScrollLeft {
   from { transform: translateX(0); }
