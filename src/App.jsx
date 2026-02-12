@@ -3,14 +3,14 @@ import { profile, about, education, projects, skills, certifications } from './d
 import './App.css'
 
 const experience = [
-  { role: 'Frontend Engineer', company: 'Mercanis', period: 'Feb 2026 – Present', description: ['Building core product features with SvelteKit, TypeScript, and Tailwind.', 'Improving and scaling a modular frontend architecture.', 'Collaborating through code reviews, pairing, and technical discussions.', 'Driving improvements in performance, accessibility, and developer experience.'], tags: ['Svelte', 'TypeScript', 'Tailwind CSS', 'Vite', 'Jest', 'Playwright', 'Figma', 'Jira', 'GitLab', 'CI/CD', 'Sprint Planning'] },
-  { role: 'Frontend Developer', company: 'BudnBed', period: 'Nov 2025 – Jan 2026', description: ['Translating the vision of a student-owned economy into clear, intuitive user interfaces.', 'Building trust-first UX for student-to-student stays and hangouts.', 'Developing and iterating on core product features from early concepts to production.', 'Collaborating closely with product and design in a fast-moving startup environment.', 'Focusing on usability, performance, and simplicity across the frontend.', 'Laying scalable foundations for growth while keeping the product human and accessible.'], tags: ['React', 'JavaScript', 'APIs', 'UX Design', 'Startup', 'Product Development', 'Design Collaboration', 'Scalable Frontend'] },
-  { role: 'Junior Frontend Developer', company: 'LEAP Digital Marketing GmbH', period: 'Apr 2025 – Jul 2025', description: ['Developed frontend features using JavaScript, HTML, and CSS for large-scale e-commerce websites.', 'Built and executed A/B & multivariate tests using the Kameleoon experimentation platform.', 'Analyzed test results to identify UX improvements and measurable business impact.', 'Implemented tracking & personalization logic, improving user journeys and engagement.', 'Collaborated closely with UX designers, analysts, and CRO managers in an agile team.', 'Optimized performance and accessibility, ensuring fast and user-friendly experiences.', 'Debugged client-side issues and delivered stable, clean and maintainable code.'], tags: ['JavaScript', 'HTML', 'CSS', 'Kameleoon', 'E-Commerce', 'A/B Testing', 'Jira', 'Confluence'] },
-  { role: 'Full-Stack Development Instructor', company: 'ReDI School of Digital Integration', period: 'Sep 2024 – Dec 2024', description: ['Taught Full-Stack Web Development (HTML, CSS, JavaScript, React) to women with forced migration backgrounds.', 'Empowered students by fostering technical skills and confidence.', 'Leveraged my journey from Sales to Full-Stack Development to mentor and inspire.', 'Contributed to bridging the digital skills gap and supporting refugee women\'s integration into tech.'], tags: ['Teaching', 'React', 'JavaScript', 'HTML', 'CSS', 'Mentoring', 'Full-Stack', 'Curriculum Design'] },
-  { role: 'Software Developer', company: 'COLNEO GmbH', period: 'Aug 2024 – Oct 2024', description: ['Translated Figma designs into responsive, pixel-perfect interfaces.', 'Integrated REST APIs and ensured stable, efficient data flow.', 'Applied modern JavaScript best practices for cleaner, more maintainable code.'], tags: ['JavaScript', 'Figma', 'Vue'] },
-  { role: 'Full Stack Developer', company: 'Freelance', period: 'Jan 2024 – Jul 2024', description: 'Freelance full-stack development projects across the stack.', tags: ['Full-Stack', 'JavaScript', 'React', 'Node.js', 'APIs', 'Git', 'Responsive Web'] },
-  { role: 'Sales Support Associate', company: 'SoftwareOne', period: 'Apr 2023 – Sep 2023', description: ['Sales coordination: order processing, quote generation, and documentation with the sales team.', 'Used Microsoft Dynamics NAV (ERP) and ServiceNow for workflows and ticket management.', 'Primary point of contact for customers; maintained customer and sales data for decision-making.', 'Administrative support: calendar management, meeting coordination, sales reports.', 'Collaborated with marketing and logistics to meet customer needs.'], tags: ['Sales Coordination', 'ServiceNow', 'Microsoft Azure', 'CRM', 'B2B', 'Pre-Sales Support', 'Cloud Computing', 'SLA'] },
-  { role: 'Sales Representative', company: 'Pathus Beteiligungsgesellschaft GmbH', period: 'Aug 2019 – Mar 2023', description: ['Customer engagement: product information, queries, and positive in-store experience.', 'Met and exceeded sales targets through effective sales techniques and upselling.', 'Visual merchandising and product displays aligned with promotions.', 'Inventory management: stock checks, restocking, and accurate levels.', 'Handled customer concerns promptly; collaborated with team and management on store operations.'], tags: ['Customer Service', 'Sales & Negotiation', 'Team Management', 'Problem Solving', 'Inventory Control', 'Visual Merchandising'] },
+  { role: 'Frontend Engineer', company: 'Mercanis', period: 'Feb 2026 – Present', logo: '/companies/mercanis.png', description: ['Building core product features with SvelteKit, TypeScript, and Tailwind.', 'Improving and scaling a modular frontend architecture.', 'Collaborating through code reviews, pairing, and technical discussions.', 'Driving improvements in performance, accessibility, and developer experience.'], tags: ['Svelte', 'TypeScript', 'Tailwind CSS', 'Vite', 'Jest', 'Playwright', 'Figma', 'Jira', 'GitLab', 'CI/CD', 'Sprint Planning'] },
+  { role: 'Frontend Developer', company: 'BudnBed', period: 'Nov 2025 – Jan 2026', logo: '/companies/budnbed.png', description: ['Translating the vision of a student-owned economy into clear, intuitive user interfaces.', 'Building trust-first UX for student-to-student stays and hangouts.', 'Developing and iterating on core product features from early concepts to production.', 'Collaborating closely with product and design in a fast-moving startup environment.', 'Focusing on usability, performance, and simplicity across the frontend.', 'Laying scalable foundations for growth while keeping the product human and accessible.'], tags: ['React', 'JavaScript', 'APIs', 'UX Design', 'Startup', 'Product Development', 'Design Collaboration', 'Scalable Frontend'] },
+  { role: 'Junior Frontend Developer', company: 'LEAP Digital Marketing GmbH', period: 'Apr 2025 – Jul 2025', logo: '/companies/leap.png', description: ['Developed frontend features using JavaScript, HTML, and CSS for large-scale e-commerce websites.', 'Built and executed A/B & multivariate tests using the Kameleoon experimentation platform.', 'Analyzed test results to identify UX improvements and measurable business impact.', 'Implemented tracking & personalization logic, improving user journeys and engagement.', 'Collaborated closely with UX designers, analysts, and CRO managers in an agile team.', 'Optimized performance and accessibility, ensuring fast and user-friendly experiences.', 'Debugged client-side issues and delivered stable, clean and maintainable code.'], tags: ['JavaScript', 'HTML', 'CSS', 'Kameleoon', 'E-Commerce', 'A/B Testing', 'Jira', 'Confluence'] },
+  { role: 'Full-Stack Development Instructor', company: 'ReDI School of Digital Integration', period: 'Sep 2024 – Dec 2024', logo: '/companies/redi.png', description: ['Taught Full-Stack Web Development (HTML, CSS, JavaScript, React) to women with forced migration backgrounds.', 'Empowered students by fostering technical skills and confidence.', 'Leveraged my journey from Sales to Full-Stack Development to mentor and inspire.', 'Contributed to bridging the digital skills gap and supporting refugee women\'s integration into tech.'], tags: ['Teaching', 'React', 'JavaScript', 'HTML', 'CSS', 'Mentoring', 'Full-Stack', 'Curriculum Design'] },
+  { role: 'Software Developer', company: 'COLNEO GmbH', period: 'Aug 2024 – Oct 2024', logo: '/companies/colneo.png', description: ['Translated Figma designs into responsive, pixel-perfect interfaces.', 'Integrated REST APIs and ensured stable, efficient data flow.', 'Applied modern JavaScript best practices for cleaner, more maintainable code.'], tags: ['JavaScript', 'Figma', 'Vue'] },
+  { role: 'Full Stack Developer', company: 'Freelance', period: 'Jan 2024 – Jul 2024', logo: '/companies/freelance.png', description: 'Freelance full-stack development projects across the stack.', tags: ['Full-Stack', 'JavaScript', 'React', 'Node.js', 'APIs', 'Git', 'Responsive Web'] },
+  { role: 'Sales Support Associate', company: 'SoftwareOne', period: 'Apr 2023 – Sep 2023', logo: '/companies/softwareone.png', description: ['Sales coordination: order processing, quote generation, and documentation with the sales team.', 'Used Microsoft Dynamics NAV (ERP) and ServiceNow for workflows and ticket management.', 'Primary point of contact for customers; maintained customer and sales data for decision-making.', 'Administrative support: calendar management, meeting coordination, sales reports.', 'Collaborated with marketing and logistics to meet customer needs.'], tags: ['Sales Coordination', 'ServiceNow', 'Microsoft Azure', 'CRM', 'B2B', 'Pre-Sales Support', 'Cloud Computing', 'SLA'] },
+  { role: 'Sales Representative', company: 'Pathus Beteiligungsgesellschaft GmbH', period: 'Aug 2019 – Mar 2023', logo: '/companies/pathus.png', description: ['Customer engagement: product information, queries, and positive in-store experience.', 'Met and exceeded sales targets through effective sales techniques and upselling.', 'Visual merchandising and product displays aligned with promotions.', 'Inventory management: stock checks, restocking, and accurate levels.', 'Handled customer concerns promptly; collaborated with team and management on store operations.'], tags: ['Customer Service', 'Sales & Negotiation', 'Team Management', 'Problem Solving', 'Inventory Control', 'Visual Merchandising'] },
 ]
 
 function useInView(options = {}) {
@@ -186,9 +186,14 @@ function App() {
           {experience.map((job, i) => (
             <li key={i} className="experience-item">
               <div className="experience-header">
-                <h3>{job.role}</h3>
-                <span className="company">{job.company}</span>
-                <span className="period">{job.period}</span>
+                {job.logo && (
+                  <img src={job.logo} alt="" className="experience-logo" onError={(e) => { e.target.style.display = 'none'; }} />
+                )}
+                <div className="experience-header-text">
+                  <h3>{job.role}</h3>
+                  <span className="company">{job.company}</span>
+                  <span className="period">{job.period}</span>
+                </div>
               </div>
               {Array.isArray(job.description) ? (
                 <ul className="experience-bullets">
@@ -214,9 +219,14 @@ function App() {
           {education.map((entry, i) => (
             <li key={i} className="education-item">
               <div className="education-header">
-                <h3>{entry.institution}</h3>
-                <span className="education-program">{entry.program}</span>
-                <span className="education-period">{entry.period}</span>
+                {entry.logo && (
+                  <img src={entry.logo} alt="" className="education-logo" onError={(e) => { e.target.style.display = 'none'; }} />
+                )}
+                <div className="education-header-text">
+                  <h3>{entry.institution}</h3>
+                  <span className="education-program">{entry.program}</span>
+                  <span className="education-period">{entry.period}</span>
+                </div>
               </div>
               {Array.isArray(entry.description) ? (
                 entry.description.map((p, k) => <p key={k} className="education-desc">{p}</p>)

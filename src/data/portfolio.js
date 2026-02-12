@@ -128,6 +128,7 @@ export const education = [
     institution: 'Ironhack',
     program: 'Remote Bootcamp, Full Stack Web Development Program',
     period: 'Oct 2023 – Dec 2023',
+    logo: '/education/ironhack.png',
     description: [
       'Honed skills in frontend technologies (HTML, CSS, JavaScript ES6) and React for dynamic, responsive UIs. On the backend, mastered Express.js, Node.js, and MongoDB; used Axios for data communication.',
       'Used Git and GitHub for version control. Gained expertise in TypeScript, JSON, JWT, OOP, and the MERN stack. Ensured responsive design, worked with APIs, tested with Postman. Used Bootstrap and Mongoose ODM.',
@@ -139,6 +140,7 @@ export const education = [
     institution: 'Susanna-Eger-Schule Leipzig',
     program: 'Accounting and Business Management',
     period: 'Sep 2019 – Jun 2022',
+    logo: '/education/susanna-eger-schule.png',
     description: 'Acquired expertise in strategic management, corporate leadership, and organisational development. Developed skills to manage corporate finances and make informed, data-driven business decisions.',
     tags: ['Microsoft Office', 'Business Management', 'Strategic Management'],
   },
