@@ -2,12 +2,13 @@
 
 export const profile = {
   name: 'Menatalla Gomaa',
-  tagline: 'Developer · Problem solver · Builder',
+  tagline: 'Building performant, accessible web experiences.',
   location: 'Germany',
   email: 'your.email@example.com',
   linkedin: 'https://www.linkedin.com/in/menatalla-gomaa-0703mg/',
   github: 'https://github.com/yourusername',
-  image: null, // optional: add path to your photo, e.g. '/photo.jpg'
+  image: null,
+  cvUrl: null, // optional: add URL to your CV PDF, e.g. '/cv.pdf'
 }
 
 export const about = {
