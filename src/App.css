@@ -326,14 +326,27 @@
 }
 
 .project-card-image {
+  position: relative;
   aspect-ratio: 16/10;
   background: var(--bg-elevated);
+  overflow: hidden;
 }
 
 .project-card-placeholder {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   background: linear-gradient(135deg, var(--border) 0%, var(--bg-elevated) 100%);
+}
+
+.project-card-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .project-card-body {
@@ -395,8 +408,40 @@
   line-height: 1.65;
 }
 
-.about-p:last-child {
-  margin-bottom: 0;
+.about-focus {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.about-focus-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+  color: var(--text);
+}
+
+.about-focus-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.5rem 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.about-focus-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+  line-height: 1.4;
+}
+
+.about-focus-icon {
+  flex-shrink: 0;
+  font-size: 1.1rem;
 }
 
 /* ========== Experience ========== */
@@ -481,6 +526,54 @@
   background: var(--accent-dim);
   color: var(--accent);
   border-radius: 4px;
+}
+
+/* ========== Education ========== */
+.education-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.education-item {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.education-item:last-child {
+  border-bottom: none;
+}
+
+.education-header {
+  margin-bottom: 0.5rem;
+}
+
+.education-header h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.1rem;
+}
+
+.education-program {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+}
+
+.education-period {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.education-desc {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.education-item .tags {
+  margin-bottom: 0;
 }
 
 /* ========== Skills ========== */
@@ -648,7 +741,8 @@
 
 .footer-bar p {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 1.15rem;
+  font-weight: 700;
   color: var(--accent);
 }
 

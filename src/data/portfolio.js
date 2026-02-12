@@ -14,9 +14,23 @@ export const profile = {
 
 export const about = {
   headline: 'About me',
+  lead: "I'm Mena — a frontend-leaning engineer who loves turning messy, real-world problems into clear, usable web experiences.",
   paragraphs: [
-    'I’m a developer who loves turning ideas into clear, usable products. I focus on clean code, thoughtful UX, and shipping things that work.',
-    'When I’m not coding, I enjoy learning new tools and approaches and contributing to projects that make a difference.',
+    "The web never stands still: problems evolve, tools improve, and there's always room to build something that actually helps. What drives me is solving real problems and seeing my work create impact beyond the screen.",
+    "I moved into tech from sales, and that background still shapes how I work — strong product sense, clear communication, and a user-first lens on everything I build. I thrive in teams where ideas get challenged, refined, and turned into thoughtful, scalable solutions.",
+    "I'm fluent in German and English and at ease in diverse, international teams. Curiosity, adaptability, and a habit of continuous learning sit at the heart of how I grow as an engineer.",
+    "Right now I'm focused on building modern web applications with clean architecture, strong UX, and maintainable code — and I'm always curious about what's next.",
+  ],
+  skillsFocusTitle: 'Skills & Focus',
+  skillsFocus: [
+    { icon: '⚡', label: 'Frontend & Full-Stack Web Development' },
+    { icon: '🧪', label: 'Testing, Debugging & Code Quality' },
+    { icon: '🚀', label: 'Deployment, Tooling & Version Control (Git)' },
+    { icon: '🧠', label: 'Problem Solving & Analytical Thinking' },
+    { icon: '🤝', label: 'Collaboration, Communication & Teamwork' },
+    { icon: '🎨', label: 'UX Awareness & Creative Thinking' },
+    { icon: '📈', label: 'Ownership, Proactivity & Continuous Learning' },
+    { icon: '♿', label: 'Accessibility & Inclusive Design' },
   ],
 }
 
@@ -109,33 +123,66 @@ export const experience = [
   },
 ]
 
+export const education = [
+  {
+    institution: 'Ironhack',
+    program: 'Remote Bootcamp, Full Stack Web Development Program',
+    period: 'Oct 2023 – Dec 2023',
+    description: [
+      'Honed skills in frontend technologies (HTML, CSS, JavaScript ES6) and React for dynamic, responsive UIs. On the backend, mastered Express.js, Node.js, and MongoDB; used Axios for data communication.',
+      'Used Git and GitHub for version control. Gained expertise in TypeScript, JSON, JWT, OOP, and the MERN stack. Ensured responsive design, worked with APIs, tested with Postman. Used Bootstrap and Mongoose ODM.',
+      'Demonstrated strong problem-solving and collaborated effectively in a team with clear communication.',
+    ],
+    tags: ['TypeScript', 'React', 'Node.js', 'MongoDB', 'Express', 'MERN', 'Git', 'REST APIs'],
+  },
+  {
+    institution: 'Susanna-Eger-Schule Leipzig',
+    program: 'Rechnungswesen und Business Management',
+    period: 'Sep 2019 – Jun 2022',
+    description: 'Acquired expertise in strategic management, corporate leadership, and organisational development. Developed skills to manage corporate finances and make informed, data-driven business decisions.',
+    tags: ['Microsoft Office', 'Business Management', 'Strategic Management'],
+  },
+]
+
 export const projects = [
+  {
+    title: 'Bella Biladi Delivery Platform',
+    description: 'Full-stack food delivery platform for Bella Biladi restaurant in Leipzig. Real-time driver GPS tracking with WebSocket, interactive menu with cart, admin dashboard for order management and PDF tickets, driver portal with location sharing and route optimization, secure checkout with address validation and dynamic delivery fees.',
+    link: 'https://github.com/MenatallaGomaa/Bella-Biladi-Delivery',
+    liveUrl: 'https://bellabiladi-lieferservice.netlify.app/home',
+    image: '/projects/bella-biladi-delivery.png',
+    tags: ['React 19', 'Node.js', 'Express.js', 'MongoDB', 'Socket.io', 'Leaflet.js', 'Tailwind CSS'],
+  },
   {
     title: 'Bella Biladi Pizzeria',
     description: 'Fully responsive website for Bella Biladi Pizzeria with UI/UX from Figma, Node.js/Express backend for reservation inquiries, Google Maps API integration, and mobile optimization.',
-    link: 'https://github.com/MenatallaGomaa',
+    link: 'https://github.com/MenatallaGomaa/Bella',
     liveUrl: 'https://bellabiladipizzeria.com/',
+    image: '/projects/bella-biladi-pizzeria.png',
     tags: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Express', 'Figma', 'Google Maps API'],
   },
   {
     title: 'DriveEase',
     description: 'Car rental web application with an intuitive UI and seamless booking experience. Implemented JWT authentication for secure user accounts.',
-    link: 'https://github.com/MenatallaGomaa',
+    link: 'https://github.com/MenatallaGomaa/DriveEase',
     liveUrl: 'https://main--driveease.netlify.app/',
+    image: '/projects/driveease.png',
     tags: ['React.js', 'Tailwind CSS', 'JWT'],
   },
   {
     title: 'Homyz Real Estate',
     description: 'Real estate site with an intuitive search to filter by location, price, and features. Detailed property listings with comprehensive info and images, increasing user interaction by 30%.',
-    link: 'https://github.com/MenatallaGomaa',
+    link: 'https://github.com/MenatallaGomaa/RealEstateWebsite',
     liveUrl: 'https://main--homyzrealestatewebsie.netlify.app/',
+    image: '/projects/homyz.png',
     tags: ['React.js', 'JavaScript'],
   },
   {
     title: 'EvoGym',
     description: 'Fitness web application with a component-based architecture. TypeScript for static typing and reliability, responsive UI with Tailwind CSS, increasing mobile usage by 25%.',
-    link: 'https://github.com/MenatallaGomaa',
+    link: 'https://github.com/MenatallaGomaa/EvoGym',
     liveUrl: 'https://evogymproject.netlify.app/',
+    image: '/projects/evogym.png',
     tags: ['TypeScript', 'React.js', 'Tailwind CSS'],
   },
 ]

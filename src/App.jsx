@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { profile, about, projects, skills } from './data/portfolio'
+import { profile, about, education, projects, skills } from './data/portfolio'
 import './App.css'
 
 const experience = [
@@ -31,6 +31,7 @@ function App() {
   const [theme, setTheme] = useState(() => localStorage.getItem('portfolio-theme') || 'dark')
   const [aboutRef, aboutInView] = useInView()
   const [expRef, expInView] = useInView()
+  const [educationRef, educationInView] = useInView()
   const [projectsRef, projectsInView] = useInView()
   const [skillsRef, skillsInView] = useInView()
   const [contactRef, contactInView] = useInView()
@@ -52,8 +53,9 @@ function App() {
       <header className="site-header">
         <a href="#" className="site-name">{profile.name.toUpperCase()}</a>
         <nav className="site-nav">
-          <a href="#about">About</a>
+          <a href="#about">About me</a>
           <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
           <a href="#projects">Projects</a>
           <a href="#skills">Skills</a>
           <a href="#contact">Contact</a>
@@ -103,6 +105,30 @@ function App() {
         </div>
       </section>
 
+      {/* About */}
+      <section id="about" ref={aboutRef} className={`section section-reveal ${aboutInView ? 'in-view' : ''}`}>
+        <h2 className="section-title">About me</h2>
+        <div className="about-block">
+          {about.lead && <p className="about-lead">{about.lead}</p>}
+          {about.paragraphs.map((p, i) => (
+            <p key={i} className="about-p">{p}</p>
+          ))}
+          {about.skillsFocus && about.skillsFocus.length > 0 && (
+            <div className="about-focus">
+              <h3 className="about-focus-title">{about.skillsFocusTitle}</h3>
+              <ul className="about-focus-list">
+                {about.skillsFocus.map((item, i) => (
+                  <li key={i} className="about-focus-item">
+                    <span className="about-focus-icon" aria-hidden="true">{item.icon}</span>
+                    <span>{item.label}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      </section>
+
       {/* Featured Projects */}
       <section id="projects" ref={projectsRef} className={`section section-reveal ${projectsInView ? 'in-view' : ''}`}>
         <h2 className="section-title">Featured Projects</h2>
@@ -111,6 +137,14 @@ function App() {
             <article key={i} className="project-card">
               <div className="project-card-image">
                 <div className="project-card-placeholder" />
+                {proj.image && (
+                  <img
+                    src={proj.image}
+                    alt=""
+                    className="project-card-img"
+                    onError={(e) => { e.target.style.display = 'none'; }}
+                  />
+                )}
               </div>
               <div className="project-card-body">
                 <h3>{proj.title}</h3>
@@ -124,17 +158,6 @@ function App() {
                 </div>
               </div>
             </article>
-          ))}
-        </div>
-      </section>
-
-      {/* About (compact) */}
-      <section id="about" ref={aboutRef} className={`section section-reveal ${aboutInView ? 'in-view' : ''}`}>
-        <h2 className="section-title">About</h2>
-        <div className="about-block">
-          <p className="about-lead">Hi, I'm {profile.name.split(' ')[0]}</p>
-          {about.paragraphs.map((p, i) => (
-            <p key={i} className="about-p">{p}</p>
           ))}
         </div>
       </section>
@@ -160,6 +183,32 @@ function App() {
               {job.tags?.length > 0 && (
                 <div className="tags">
                   {job.tags.map((tag, j) => <span key={j}>{tag}</span>)}
+                </div>
+              )}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      {/* Education */}
+      <section id="education" ref={educationRef} className={`section section-reveal ${educationInView ? 'in-view' : ''}`}>
+        <h2 className="section-title">Education</h2>
+        <ul className="education-list">
+          {education.map((entry, i) => (
+            <li key={i} className="education-item">
+              <div className="education-header">
+                <h3>{entry.institution}</h3>
+                <span className="education-program">{entry.program}</span>
+                <span className="education-period">{entry.period}</span>
+              </div>
+              {Array.isArray(entry.description) ? (
+                entry.description.map((p, k) => <p key={k} className="education-desc">{p}</p>)
+              ) : (
+                <p className="education-desc">{entry.description}</p>
+              )}
+              {entry.tags?.length > 0 && (
+                <div className="tags">
+                  {entry.tags.map((tag, j) => <span key={j}>{tag}</span>)}
                 </div>
               )}
             </li>
