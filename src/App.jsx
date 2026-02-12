@@ -30,6 +30,8 @@ function useInView(options = {}) {
 function App() {
   const [theme, setTheme] = useState(() => localStorage.getItem('portfolio-theme') || 'dark')
   const [navOpen, setNavOpen] = useState(false)
+  const [showScrollTop, setShowScrollTop] = useState(false)
+  const projectCardRefs = useRef([])
   const [aboutRef, aboutInView] = useInView()
   const [expRef, expInView] = useInView()
   const [educationRef, educationInView] = useInView()
@@ -42,6 +44,13 @@ function App() {
     document.documentElement.setAttribute('data-theme', theme)
     localStorage.setItem('portfolio-theme', theme)
   }, [theme])
+
+  useEffect(() => {
+    const onScroll = () => setShowScrollTop(window.scrollY > 400)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    onScroll()
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
@@ -56,18 +65,37 @@ function App() {
     }
   }
 
+  const handleProjectKeyDown = (e, index) => {
+    if (e.key === 'ArrowRight') {
+      e.preventDefault()
+      const next = projectCardRefs.current[index + 1]
+      if (next) next.focus()
+    } else if (e.key === 'ArrowLeft') {
+      e.preventDefault()
+      const prev = projectCardRefs.current[index - 1]
+      if (prev) prev.focus()
+    } else if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault()
+      const proj = projects[index]
+      const url = proj.liveUrl || proj.link
+      if (url) window.open(url, '_blank', 'noopener,noreferrer')
+    }
+  }
+
   const nameSlug = profile.name.toLowerCase().replace(/\s+/g, '-')
 
   return (
     <div className="site-wrap">
       {/* Header */}
       <header className="site-header">
-        <a href="#" className="site-name" onClick={(e) => { e.preventDefault(); scrollTo('about'); }}>{profile.name.toUpperCase()}</a>
-        <button type="button" className="nav-toggle" onClick={() => setNavOpen(!navOpen)} aria-expanded={navOpen} aria-label="Toggle menu">
-          <span className="nav-toggle-bar" />
-          <span className="nav-toggle-bar" />
-          <span className="nav-toggle-bar" />
-        </button>
+        <div className="header-left">
+          <a href="#" className="site-name" onClick={(e) => { e.preventDefault(); scrollTo('about'); }}>{profile.name.toUpperCase()}</a>
+          <button type="button" className="nav-toggle" onClick={() => setNavOpen(!navOpen)} aria-expanded={navOpen} aria-label="Toggle menu">
+            <span className="nav-toggle-bar" />
+            <span className="nav-toggle-bar" />
+            <span className="nav-toggle-bar" />
+          </button>
+        </div>
         <nav className={`site-nav ${navOpen ? 'open' : ''}`}>
           <a href="#about" onClick={handleNavClick}>About me</a>
           <a href="#experience" onClick={handleNavClick}>Experience</a>
@@ -79,15 +107,7 @@ function App() {
         </nav>
         <div className="header-right">
           <span className="code-icon" aria-hidden="true">&lt;/&gt;</span>
-          <div className="header-theme">
-            <button type="button" className={`theme-btn theme-btn--header theme-btn--icon ${theme === 'dark' ? 'active' : ''}`} onClick={() => setTheme('dark')} aria-label="Dark mode">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" /></svg>
-            </button>
-            <button type="button" className={`theme-btn theme-btn--header theme-btn--icon ${theme === 'light' ? 'active' : ''}`} onClick={() => setTheme('light')} aria-label="Light mode">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5" /><line x1="12" y1="1" x2="12" y2="3" /><line x1="12" y1="21" x2="12" y2="23" /><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" /><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" /><line x1="1" y1="12" x2="3" y2="12" /><line x1="21" y1="12" x2="23" y2="12" /><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" /><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" /></svg>
-            </button>
-          </div>
-          <button type="button" className="theme-toggle" onClick={() => setTheme(t => t === 'dark' ? 'light' : 'dark')} aria-label="Toggle theme">
+          <button type="button" className="theme-toggle" onClick={() => setTheme(t => t === 'dark' ? 'light' : 'dark')} aria-label="Toggle dark or light mode" title="Switch between dark and light mode">
             <span className="theme-toggle-track">
               <span className="theme-toggle-thumb" />
             </span>
@@ -151,7 +171,15 @@ function App() {
         <h2 className="section-title">Featured Projects</h2>
         <div className="projects-grid">
           {projects.map((proj, i) => (
-            <article key={i} className="project-card">
+            <article
+              key={i}
+              ref={(el) => { projectCardRefs.current[i] = el }}
+              className="project-card"
+              tabIndex={0}
+              role="button"
+              aria-label={`${proj.title}. Press Enter to open demo.`}
+              onKeyDown={(e) => handleProjectKeyDown(e, i)}
+            >
               <div className="project-card-image">
                 <div className="project-card-placeholder" />
                 {proj.image && (
@@ -297,6 +325,18 @@ function App() {
               <a href={`mailto:${profile.email}`}>{profile.email}</a>
             </p>
           </div>
+          {showScrollTop && (
+            <button
+              type="button"
+              className="scroll-to-top"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              aria-label="Scroll to top"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M18 15l-6-6-6 6" />
+              </svg>
+            </button>
+          )}
         </div>
       </section>
 
