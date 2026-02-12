@@ -29,6 +29,7 @@ function useInView(options = {}) {
 
 function App() {
   const [theme, setTheme] = useState(() => localStorage.getItem('portfolio-theme') || 'dark')
+  const [navOpen, setNavOpen] = useState(false)
   const [aboutRef, aboutInView] = useInView()
   const [expRef, expInView] = useInView()
   const [educationRef, educationInView] = useInView()
@@ -44,6 +45,15 @@ function App() {
 
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+    setNavOpen(false)
+  }
+
+  const handleNavClick = (e) => {
+    const href = e.currentTarget.getAttribute('href')
+    if (href?.startsWith('#')) {
+      e.preventDefault()
+      scrollTo(href.slice(1))
+    }
   }
 
   const nameSlug = profile.name.toLowerCase().replace(/\s+/g, '-')
@@ -52,15 +62,20 @@ function App() {
     <div className="site-wrap">
       {/* Header */}
       <header className="site-header">
-        <a href="#" className="site-name">{profile.name.toUpperCase()}</a>
-        <nav className="site-nav">
-          <a href="#about">About me</a>
-          <a href="#experience">Experience</a>
-          <a href="#education">Education</a>
-          <a href="#projects">Projects</a>
-          <a href="#certifications">Certifications</a>
-          <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
+        <a href="#" className="site-name" onClick={(e) => { e.preventDefault(); scrollTo('about'); }}>{profile.name.toUpperCase()}</a>
+        <button type="button" className="nav-toggle" onClick={() => setNavOpen(!navOpen)} aria-expanded={navOpen} aria-label="Toggle menu">
+          <span className="nav-toggle-bar" />
+          <span className="nav-toggle-bar" />
+          <span className="nav-toggle-bar" />
+        </button>
+        <nav className={`site-nav ${navOpen ? 'open' : ''}`}>
+          <a href="#about" onClick={handleNavClick}>About me</a>
+          <a href="#experience" onClick={handleNavClick}>Experience</a>
+          <a href="#education" onClick={handleNavClick}>Education</a>
+          <a href="#projects" onClick={handleNavClick}>Projects</a>
+          <a href="#certifications" onClick={handleNavClick}>Certifications</a>
+          <a href="#skills" onClick={handleNavClick}>Skills</a>
+          <a href="#contact" onClick={handleNavClick}>Contact</a>
         </nav>
         <div className="header-right">
           <span className="code-icon" aria-hidden="true">&lt;/&gt;</span>
