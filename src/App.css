@@ -763,20 +763,20 @@
 }
 
 .education-header h3 {
-  margin: 0 0 0.25rem;
-  font-size: 1.1rem;
+  margin: 0 0 0.15rem;
+  font-size: 1.05rem;
 }
 
-.education-program {
-  display: block;
-  font-size: 0.95rem;
-  color: var(--text);
-  margin-bottom: 0.25rem;
+.education-institution {
+  font-weight: 500;
+  color: var(--accent);
+  font-size: 0.9rem;
 }
 
 .education-period {
   font-size: 0.85rem;
   color: var(--text-muted);
+  margin-left: 0.75rem;
 }
 
 .education-desc {

@@ -223,8 +223,8 @@ function App() {
                   <img src={entry.logo} alt="" className="education-logo" onError={(e) => { e.target.style.display = 'none'; }} />
                 )}
                 <div className="education-header-text">
-                  <h3>{entry.institution}</h3>
-                  <span className="education-program">{entry.program}</span>
+                  <h3>{entry.program}</h3>
+                  <span className="education-institution">{entry.institution}</span>
                   <span className="education-period">{entry.period}</span>
                 </div>
               </div>
