@@ -292,7 +292,8 @@ function App() {
 
       {/* Footer bar */}
       <footer className="footer-bar">
-        <p>Hi! You're curious I like that.</p>
+        <span className="footer-icon" aria-hidden="true">◇</span>
+        <p>Designed and built with care. Get in touch above.</p>
         <span className="footer-icon" aria-hidden="true">◇</span>
       </footer>
     </div>
